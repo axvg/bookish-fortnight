@@ -1,5 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
 import { NextRequest, NextResponse } from "next/server";
 
 export const config = {
@@ -8,6 +6,16 @@ export const config = {
 
 export default (req: NextRequest) => {
   return NextResponse.json({
-    message: `Hello world ${req.url}`,
+    ok: true,
+    data: [
+      {
+        id: 1,
+        name: "foo",
+      },
+      {
+        id: 2,
+        name: "bar",
+      },
+    ],
   });
 };
